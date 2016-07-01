@@ -121,6 +121,11 @@ gulp.task('libs', () => {
     .pipe(reload({stream:true}));
 });
 
+gulp.task('serviceWorkerManifest', () => {
+  gulp.src(['src/manifest.json','src/serviceWorker.js'])
+    .pipe(gulp.dest(paths.dist));
+});
+
 gulp.task('lint', () => {
   gulp.src(paths.srcLint)
   .pipe(eslint())
@@ -138,10 +143,10 @@ gulp.task('deploy', () => {
 });
 
 gulp.task('watch', cb => {
-  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint', 'images', 'libs'], cb);
+  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint', 'images', 'libs', 'serviceWorkerManifest'], cb);
 });
 
 gulp.task('build', cb => {
   process.env.NODE_ENV = 'production';
-  runSequence('clean', ['browserify', 'styles', 'htmlReplace', 'images', 'libs'], cb);
+  runSequence('clean', ['browserify', 'styles', 'htmlReplace', 'images', 'libs', 'serviceWorkerManifest'], cb);
 });
