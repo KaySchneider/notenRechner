@@ -10,9 +10,10 @@ const PoweredBy = () => {
   return (
     <div>
       <h2>Powered by</h2>
-      <a href="https://">
+      <a href="https://github.com/KaySchneider">
         gradCalc by Kay Schneider
       </a>
+      <br/>
       <a href="https://david-dm.org/granze/react-starterify">
         <img src="https://david-dm.org/granze/react-starterify/status.svg" alt="deps status" />
       </a>

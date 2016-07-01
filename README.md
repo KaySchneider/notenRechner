@@ -1,3 +1,16 @@
+
+# Noten Rechner 
+
+Ein minimalistischer Notenrechner. Berechnet Noten mit einem linearen Notenschlüssel. Frei wählbare Maximal Punktzahl
+
+## Notenrechner benutzen:
+[zum Notenrechner](https://kayschneider.github.io/notenRechner/#/calc)
+
+
+
+## Als Skeleton wurde React-Starterify verwendet:
+
+
 [![Build Status](https://travis-ci.org/Granze/react-starterify.svg?branch=master)](https://travis-ci.org/Granze/react-starterify)
 [![bitHound Score](https://www.bithound.io/github/Granze/react-starterify/badges/score.svg)](https://www.bithound.io/github/Granze/react-starterify/master)
 [![Dependency status](https://david-dm.org/granze/react-starterify/status.svg)](https://david-dm.org/granze/react-starterify "Dependency status")

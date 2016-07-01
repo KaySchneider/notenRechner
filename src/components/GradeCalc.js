@@ -2,7 +2,7 @@
  * Created by ikay on 30.06.16.
  */
 import React from 'react';
-import {Textfield} from 'react-mdl';
+import {Textfield, Card, CardTitle, CardText, Grid, Cell} from 'react-mdl';
 import gradeCalc from './lib/gradeCalc';
 
 
@@ -34,25 +34,41 @@ class GradeCalc extends React.Component {
     var max=this.state.max;
     var reached=this.state.reached;
     var grade = this.state.grade;
-    return (<div>
-      <p><b>Maximale Punkte</b></p>
-      <Textfield
-        onChange={changeMax}
-        value={max}
-        pattern="-?[0-9]*(\.[0-9]+)?"
-        error="Eingabe ist keine Nummer!"
-        label="Maximale Punkte"
-      />
-      <p><b>Erreicht</b></p>
-      <Textfield
-        onChange={changeReached} value={reached}
-        pattern="-?[0-9]*(\.[0-9]+)?"
-        error="Eingabe ist keine Nummer!"
-        label="Erreichte Punkte"
-      />
-
-      <p>Note:<br/>{grade}</p>
-    </div>);
+    return (<Grid style={{padding:'20px', height:'100%'}}>
+      <Cell col={12}>
+      <Card shadow={0} style={{height:'100%', width:'100%'}}>
+        <CardText>
+          <Grid>
+            <Cell col={12}>
+              <h3>Note: {grade}</h3>
+            </Cell>
+            <Cell col={6} phone={2}>
+              <b>Maximal: </b>
+              <Textfield
+                onChange={changeMax}
+                value={max}
+                pattern="-?[0-9]*(\.[0-9]+)?"
+                error="Eingabe ist keine Nummer!"
+                label="Maximale Punkte"
+              />
+            </Cell>
+            <Cell col={6} phone={2}>
+            <b>Erreicht: </b>
+            <Textfield
+              onChange={changeReached} value={reached}
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              error="Eingabe ist keine Nummer!"
+              label="Erreichte Punkte"
+            />
+            </Cell>
+          </Grid>
+        </CardText>
+      </Card>
+      </Cell>
+    </Grid>);
   }
 }
 export default GradeCalc;
+/**
+
+**/
