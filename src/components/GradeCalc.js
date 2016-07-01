@@ -35,7 +35,7 @@ class GradeCalc extends React.Component {
     var reached=this.state.reached;
     var grade = this.state.grade;
     return (<div>
-      <p><b>Max</b></p>
+      <p><b>Maximale Punkte</b></p>
       <Textfield
         onChange={changeMax}
         value={max}

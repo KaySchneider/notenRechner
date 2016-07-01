@@ -138,10 +138,10 @@ gulp.task('deploy', () => {
 });
 
 gulp.task('watch', cb => {
-  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint', 'images'], cb);
+  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint', 'images', 'libs'], cb);
 });
 
 gulp.task('build', cb => {
   process.env.NODE_ENV = 'production';
-  runSequence('clean', ['browserify', 'styles', 'htmlReplace', 'images'], cb);
+  runSequence('clean', ['browserify', 'styles', 'htmlReplace', 'images', 'libs'], cb);
 });
