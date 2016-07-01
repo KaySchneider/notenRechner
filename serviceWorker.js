@@ -1,7 +1,7 @@
 /**
  * Created by ikay on 01.07.16.
  */
-var cacheName = 'notencache58s8383assddsdsadsd';
+var cacheName = 'notencache58s8383assddSD882adsd';
 var filesToCache = [
   '/',
   '/manifest.json',
