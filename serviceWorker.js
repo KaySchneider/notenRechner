@@ -1,7 +1,7 @@
 /**
  * Created by ikay on 01.07.16.
  */
-var cacheName = 'notencache1222';
+var cacheName = 'notencache588383';
 var filesToCache = [
   '/',
   '/index.html',
