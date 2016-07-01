@@ -1,7 +1,7 @@
 /**
  * Created by ikay on 01.07.16.
  */
-var cacheName = 'notencache588383';
+var cacheName = 'notencache58s8383asdsdsadsd';
 var filesToCache = [
   '/',
   '/index.html',
@@ -27,6 +27,20 @@ self.addEventListener('fetch', function(e) {
   e.respondWith(
     caches.match(e.request).then(function(response) {
       return response || fetch(e.request);
+    })
+  );
+});
+
+self.addEventListener('activate', function(e) {
+  console.log('[ServiceWorker] Activate');
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
     })
   );
 });
