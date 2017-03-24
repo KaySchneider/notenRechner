@@ -3,13 +3,13 @@
  */
 var cacheName = 'notenrechnerjk82982932893';
 var filesToCache = [
-  '/',
-  '/manifest.json',
-  '/index.html',
-  'libs/material.min.js',
-  'libs/material.min.css',
-  'js/app.js',
-  'styles/main.css',
+  '/notenRechner/',
+  '/notenRechner/manifest.json',
+  '/notenRechner/index.html',
+  '/notenRechner/libs/material.min.js',
+  '/notenRechner/libs/material.min.css',
+  '/notenRechner/js/app.js',
+  '/notenRechner/styles/main.css',
 
 ];
 
